@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3" id="name-container">
+		<h1><strong>Brock Golden</strong></h1>
+		<h2>Seductively minimal, ready-to-use, blog template.
+Perfect for bloggers and other creative folks.</h3>
+		<%= link_to "Twitter", "https://twitter.com/GOLDNGRAMS" %>
+		<%= link_to "Facebook", "https://facebook.com/brock.golden.grams" %>
+		<%= link_to "YouTube", "https://www.youtube.com/user/goldngrams" %>
+		<%= link_to "linkedIn", "https://ca.linkedin.com/in/brockgolden" %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3" id="posts-container">
+		<% @posts.each do |p| %>
+			<%= render partial: "posts/post_preview", local: { post: p } %>
+		<% end %>
+	<div>
+</div>
