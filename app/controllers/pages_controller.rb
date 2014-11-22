@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [ :edit, :update, :destroy]
+  before_action :set_page, only: [:edit, :update, :destroy]
+  before_action :is_signed_in_admin, only: [:edit, :update, :destroy]
 
   # GET /pages
   # GET /pages.json
@@ -10,7 +11,18 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @posts = Post.all
+    @posts = Post.where("blog = ?", true).order("created_at DESC").paginate(per_page: 5, page: params[:page])
+  end
+
+  def contact
+  end
+
+  def articles
+    @posts = Post.where("articles = ?", true).order("created_at DESC").paginate(per_page: 5, page: params[:page])
+  end
+
+  def music
+    @posts = Post.where("music = ?",true).order("created_at DESC").paginate(per_page: 5, page: params[:page])
   end
 
   # GET /pages/new

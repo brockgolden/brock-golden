@@ -1,10 +1,9 @@
-<% provide :title, "Blog" %>
+<% provide :title, "Articles" %>
 <div class="row">
 	<div class="col-md-10 col-md-offset-1" id="posts-container">
 		<% @posts.each do |p| %>
 			<%= render partial: "posts/post_preview", locals: { post: p } %>
 		<% end %>
-
 		<% will_paginate @posts %>
 	<div>
 </div>

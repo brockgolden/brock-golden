@@ -1,10 +1,27 @@
-<div class="post">
-	<h3><%= post.title %></h3>
-	<div class="date-header">
-		<p><%= post.created_at %></p>
-	<div>
-	<p>Test</p>
-	<div class="continue">
-		<%= link_to post %>
-	<div>
+<div class="post-preview" id="<%= post.id %>">
+	<% if post.image_url? %>
+		<div class="post-image-container col-md-12 no-padding">
+			<%= image_tag(post.image_url) %>
+		</div>
+	<% end %>
+	<% if post.youtube_url? %>
+		<div class="post-image-container col-md-8 col-md-offset-2 no-padding youtube-container">
+			<%= youtube_embed(post.youtube_url) %>
+		</div>
+	<% end %>
+	<div class="post-content-container col-md-8 col-md-offset-2">	
+		<h3><%= post.title %></h3>
+		<p class="date-created"><%= post.created_at.strftime('%B %d, %Y') %></p>
+		<div class="writing-container">
+			<p><%= raw(truncate(post.content, length: post.youtube_url ? 200 : 500, seperator: ' ')) %></p>
+		</div>
+		<div class="post-preview-footer">
+			<%= link_to "Keep Reading", post_path(post.slug), id: "continue" %>
+			<% if user_signed_in? %>
+				<% if current_user.admin %>
+					<%= link_to "Edit", edit_post_path(post.id), id: "edit"  %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
 </div>

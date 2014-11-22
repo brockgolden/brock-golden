@@ -1,0 +1,2 @@
+$('#<%= @post.id %>.post-preview .writing-container').html("<%= j render partial: 'posts/post', locals: { post: @post } %>");
+$('#<%= @post.id %>.post-preview .continue').html("<%= j render partial: 'posts/post', locals: { post: @post } %>");

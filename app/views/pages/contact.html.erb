@@ -1,0 +1,15 @@
+<% provide :title, "Contact" %>
+<div class="row" >
+	<div class="col-md-10 col-md-offset-1" id="posts-container" >
+		<div class="post-image-container col-md-12 no-padding">
+			<%= image_tag("https://s3.amazonaws.com/brockgolden/brock-golden-toronto.jpg", height: 400) %>
+		</div>
+		<div class="post-content-container col-md-8 col-md-offset-2">	
+			<h3>Contact me</h3>
+			<div class="writing-container">
+				<p>Feel free to send me an email at <%= mail_to "brockgolden@gmail.com" %>. I'll try to get back to you as quickly as possible. I'm also pretty responsive via Twitter as <%= link_to "@GOLDNGRAMS", "https://twitter.com/GOLDNGRAMS" %>.</p>
+				<p>If you make good music, send it down to <%= mail_to "goldngrams@earmilk.com" %> and I can put it through some channels. I try to run through my demo and promo inbox as much as I can, and I usually respond immediately when I'm really feeling your work. Unfortunately I can't give feedback to everyone, so if you don't get a response after about a week, I just wasn't feeling it that's all.</p>
+			</div>
+		</div>
+	</div>
+</div>
