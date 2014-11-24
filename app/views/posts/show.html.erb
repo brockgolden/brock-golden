@@ -17,6 +17,9 @@
 				<p class="date-created"><%= @post.created_at.strftime('%B %d, %Y') %></p>
 				<div class="writing-container">
 					<p><%= raw(simple_format(@post.content)) %></p>
+					<% if @post.soundcloud_id %>
+						<%= soundcloud_embed(@post.soundcloud_id) %>
+					<% end %>
 				</div>
 				<div class="share-buttons col-md-12">
 					<div class="share-button">
