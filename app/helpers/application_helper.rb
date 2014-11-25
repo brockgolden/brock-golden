@@ -7,7 +7,7 @@ module ApplicationHelper
 	    youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
 	    youtube_id = $5
 	  end
-	  %Q{<iframe title="YouTube video player" width="814" height="420" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}.html_safe
+	  %Q{<iframe title="YouTube video player" width="814" height="420" src="https://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}.html_safe
 	end
 
 	def soundcloud_embed(soundcloud_id)

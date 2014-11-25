@@ -64,19 +64,22 @@
 
 .post-content-container {
 	padding-bottom: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #ebebeb;
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 }
 
 .share-buttons {
-	padding: 0px !important;
+	padding-right: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	padding-left: 25px !important; 
 	.share-button {
-		width: 15px;
-		height: 10px;
+		display: block;
+		width: 40px;
+		height: 20px;
 		margin-bottom: 5px;
-		display: inline-block;
 	}
 }
 

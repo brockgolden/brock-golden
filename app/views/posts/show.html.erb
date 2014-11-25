@@ -21,16 +21,16 @@
 						<%= soundcloud_embed(@post.soundcloud_id) %>
 					<% end %>
 				</div>
-				<div class="share-buttons col-md-12">
-					<div class="share-button">
-						<%= render_shareable :buttons => ['twitter'] %>
-					</div>
-					<div class="share-button">
-						<%= render_shareable :buttons => ['facebook'] %>
-					</div>
-					<div class="share-button">
-						<%= render_shareable :buttons => ['tumblr'] %>
-					</div>
+			</div>
+			<div class="share-buttons col-md-1 col-md-offset-9">
+				<div class="share-button">
+					<%= render_shareable :buttons => ['twitter'] %>
+				</div>
+				<div class="share-button">
+					<%= render_shareable :buttons => ['facebook'] %>
+				</div>
+				<div class="share-button">
+					<%= render_shareable :buttons => ['tumblr'] %>
 				</div>
 			</div>
 		</div>
