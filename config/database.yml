@@ -3,21 +3,18 @@ development:
   encoding: unicode
   database: brock-golden_development
   pool: 5
-  username: postgres
-  password: postgres
+  username: szum
 
 production:
   adapter: postgresql
   encoding: unicode
   database: brock-golden_production
   pool: 5
-  username: postgres
-  password: postgres
+  username: szum
 
 test:
   adapter: postgresql
   encoding: unicode
   database: brock-golden_test
   pool: 5
-  username: postgres
-  password: postgres
+  username: szum
