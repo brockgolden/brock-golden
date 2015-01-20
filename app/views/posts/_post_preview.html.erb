@@ -1,7 +1,7 @@
 <div class="post-preview" id="<%= post.id %>">
 	<% if post.image_url? %>
 		<div class="post-image-container col-md-12 no-padding">
-			<%= image_tag(post.image_url) %>
+			<%= image_tag post.image_url, alt: post.title %>
 		</div>
 	<% end %>
 	<% if post.youtube_url? %>
