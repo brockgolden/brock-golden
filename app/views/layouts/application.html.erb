@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="row">
-		
+
 		<div class="col-md-6 col-md-offset-3" id="name-container">
 			<%= link_to (image_tag("https://s3.amazonaws.com/brockgolden/avatar-brock-golden.png", size: "150x150", alt: "avatar for brock golden")), root_url %>
 			<h1><strong>Brock Golden</strong></h1>
@@ -33,6 +33,10 @@
 				<div class="social-media-container">
 					<%= link_to "LinkedIn", "https://ca.linkedin.com/in/brockgolden" %>
 					<%= image_tag "https://s3.amazonaws.com/brockgolden/linkedin-profile.png", size: "45x45", alt: "linkedIn" %>
+				</div>
+				<div class="social-media-container">
+					<%= link_to "Instagram", "https://instagram.com/goldngrams", id: "instagram-anchor"  %>
+					<%= image_tag "https://s3.amazonaws.com/brockgolden/instagram-profile.png", size: "45x45", alt: "Instagram" %>
 				</div>
 				<div class="social-media-container">
 					<%= link_to "Medium", "https://medium.com/@brockgolden" %>
