@@ -1,4 +1,6 @@
 <% provide :title, @post.title %>
+<% provide :meta_description, "Author: Brock Golden" + ", " + "Title: " + @post.title + ", " + "Description: " + truncate(
+@post.content, length: 140, seperator: ' ') %>
 <div class="row">
 	<div class="col-md-10 col-md-offset-1" id="posts-container">
 		<div class="post-preview" id="<%= @post.id %>">
@@ -12,7 +14,7 @@
 					<%= youtube_embed(@post.youtube_url) %>
 				</div>
 			<% end %>
-			<div class="post-content-container col-md-8 col-md-offset-2">	
+			<div class="post-content-container col-md-8 col-md-offset-2">
 				<h3><%= @post.title %></h3>
 				<p class="date-created"><%= @post.created_at.strftime('%B %d, %Y') %></p>
 				<div class="writing-container">
