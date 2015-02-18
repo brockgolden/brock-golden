@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @posts = Post.where("blog = ?", true).order("created_at DESC").paginate(per_page: 5, page: params[:page])
+    @posts = Post.where("blog = ?", true).order("created_at DESC").paginate(per_page: 3, page: params[:page])
   end
 
   def contact
