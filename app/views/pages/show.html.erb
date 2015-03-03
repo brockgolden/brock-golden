@@ -1,11 +1,13 @@
 <% provide :title, "Blog" %>
 <% provide :meta_description, "DJ, music writer, promoter, developer, and MBA student. I'm Brock Golden and if you make good tunes, get in touch with me on Twitter, YouTube, and Facebook." %>
 <div class="row">
-	<div class="col-md-10 col-md-offset-1" id="posts-container">
+	<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1" id="posts-container">
 		<% @posts.each do |p| %>
 			<%= render partial: "posts/post_preview", locals: { post: p } %>
 		<% end %>
 
-		<% will_paginate @posts %>
-	<div>
+    <div class="col-md-3 col-md-offset-8">
+		  <%= will_paginate @posts %>
+    </div>
+	</div>
 </div>

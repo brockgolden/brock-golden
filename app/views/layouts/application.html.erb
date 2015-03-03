@@ -4,6 +4,7 @@
   <title>Brock Golden - <%= yield(:title) %></title>
   <meta name="description" content="<%= yield :meta_description %>" />
   <meta name="google-site-verification" content="fCtVt3cW_GYE2HeSBvkyyQfU44DwRa4OZZHNBqT1h-g" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= favicon_link_tag 'https://s3.amazonaws.com/brockgolden/brock-golden-favicon.png' %>
@@ -11,66 +12,53 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="row">
-
-		<div class="col-md-6 col-md-offset-3" id="name-container">
-			<div itemscope itemtype="http://data-vocabulary.org/Person">
-				<a href='/'>
-					<img src="https://s3.amazonaws.com/brockgolden/avatar-brock-golden.png" itemprop="photo" width="150" heigh="150" alt="avatar for brock golden" />
-				</a>
-				<h1><strong><span itemprop="name">Brock Golden<span></strong></h1>
-				<h2>DJ, <span itemprop="title">music writer</span> for <span itemprop="affiliation">EARMILK</span>, <span itemprop="role">promoter</span>, <span itemprop="role">developer</span>, and gear junkie. My name is Brock Golden and this is a stash of my recent likes and works related to the many hats I wear in music. I'm based out of <span itemprop="address" itemscope
-    itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Toronto</span></span> so if you make good tunes, get in touch. Just know that I will only push sounds that I believe in.</h2>
-				<div id="social-media-links">
-					<div class="social-media-container">
-						<%= link_to "Facebook", "https://facebook.com/brock.golden.grams", id: "facebook-anchor" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/facebook-profile.png", size: "45x45", alt: "Facebook" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "YouTube", "https://www.youtube.com/user/goldngrams" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/youtube-goldngrams.png", size: "45x45", alt: "YouTube" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Twitter", "https://twitter.com/GOLDNGRAMS" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/twitter-goldngrams.png", size: "45x45", alt: "Twitter" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "LinkedIn", "https://ca.linkedin.com/in/brockgolden" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/linkedin-profile.png", size: "45x45", alt: "linkedIn" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Instagram", "https://instagram.com/goldngrams", id: "instagram-anchor"  %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/instagram-profile.png", size: "45x45", alt: "Instagram" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Medium", "https://medium.com/@brockgolden" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/medium-profile.png", size: "45x45", alt: "Medium" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Pinterest", "https://pinterest.com/brockgolden/" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/pinterest-profile.png", size: "45x45", alt: "Pinterest" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Angel", "https://angel.co/brock-golden" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/angel-list-profile.png", size: "45x45", alt: "Angel List" %>
-					</div>
-					<div class="social-media-container">
-						<%= link_to "Storify", "https://storify.com/brockgolden" %>
-						<%= image_tag "https://s3.amazonaws.com/brockgolden/storify-profile.png", size: "45x45", alt: "Storify" %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-xs-12" id="name-container">
+				<div itemscope itemtype="http://data-vocabulary.org/Person">
+					<a href='/'>
+						<img src="https://s3.amazonaws.com/brockgolden/avatar-brock-golden.png" itemprop="photo" width="150" heigh="150" alt="avatar for brock golden" />
+					</a>
+					<h1><strong><span itemprop="name">Brock Golden<span></strong></h1>
+					<h2>DJ, <span itemprop="title">music writer</span> for <span itemprop="affiliation">EARMILK</span>, <span itemprop="role">promoter</span>, <span itemprop="role">developer</span>, and gear junkie. My name is Brock Golden and this is a stash of my recent likes and works related to the many hats I wear in music. I'm based out of <span itemprop="address" itemscope
+	    itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Toronto</span></span> so if you make good tunes, get in touch. Just know that I will only push sounds that I believe in.</h2>
+	    		<div class="social-media">
+						<div class="col-xs-12 col-md-12" id="social-media-links"> ·
+							<%= link_to "Facebook", "https://facebook.com/brock.golden.grams", id: "facebook-anchor" %> ·
+							<%= link_to "YouTube", "https://www.youtube.com/user/goldngrams" %> ·
+							<%= link_to "Twitter", "https://twitter.com/GOLDNGRAMS" %> ·
+							<%= link_to "LinkedIn", "https://ca.linkedin.com/in/brockgolden" %> ·
+							<%= link_to "Instagram", "https://instagram.com/goldngrams", id: "instagram-anchor"  %> ·
+							<%= link_to "Medium", "https://medium.com/@brockgolden" %> ·
+							<%= link_to "Pinterest", "https://pinterest.com/brockgolden/" %> ·
+							<%= link_to "Angel", "https://angel.co/brock-golden" %> ·
+							<%= link_to "Storify", "https://storify.com/brockgolden" %>
+						</div>
+						<div class="social-media-images col-md-10 col-md-offset-1 col-xs-12">
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/facebook-profile.png", size: "45x45", alt: "Facebook" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/youtube-goldngrams.png", size: "45x45", alt: "YouTube" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/twitter-goldngrams.png", size: "45x45", alt: "Twitter" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/linkedin-profile.png", size: "45x45", alt: "linkedIn" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/instagram-profile.png", size: "45x45", alt: "Instagram" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/medium-profile.png", size: "45x45", alt: "Medium" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/pinterest-profile.png", size: "45x45", alt: "Pinterest" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/angel-list-profile.png", size: "45x45", alt: "Angel List" %>
+							<%= image_tag "https://s3.amazonaws.com/brockgolden/storify-profile.png", size: "45x45", alt: "Storify" %>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="col-md-4 col-md-offset-4 col-xs-12" id="nav-links">
+				<ul>
+					<li><%= link_to "Blog", root_url %> · </li>
+					<li><%= link_to "Articles", articles_path %> · </li>
+					<li><%= link_to "Music", music_path %> · </li>
+					<li><%= link_to "Contact", contact_path %></li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-4 col-md-offset-4" id="nav-links">
-			<ul>
-				<li><%= link_to "Blog", root_url %> · </li>
-				<li><%= link_to "Articles", articles_path %> · </li>
-				<li><%= link_to "Music", music_path %> · </li>
-				<li><%= link_to "Contact", contact_path %></li>
-			</ul>
-		</div>
+		<%= yield %>
+		<%= render partial: 'layouts/footer' %>
 	</div>
-	<%= yield %>
-	<%= render partial: 'layouts/footer' %>
 </body>
 </html>
