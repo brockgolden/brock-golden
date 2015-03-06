@@ -10,7 +10,7 @@
 				</div>
 			<% end %>
 			<% if @post.youtube_url? %>
-				<div class="post-image-container col-md-12 col-md-offset-2 youtube-container">
+				<div class="post-image-container col-md-10 col-md-offset-2 youtube-container">
 					<%= youtube_embed(@post.youtube_url) %>
 				</div>
 			<% end %>
