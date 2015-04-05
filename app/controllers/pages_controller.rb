@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def feed
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
     respond_to :rss, :html
   end
 
