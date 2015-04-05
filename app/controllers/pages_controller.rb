@@ -14,6 +14,11 @@ class PagesController < ApplicationController
     @posts = Post.where("blog = ?", true).order("created_at DESC").paginate(per_page: 3, page: params[:page])
   end
 
+  def feed
+    @posts = Post.all
+    respond_to :rss, :html
+  end
+
   def contact
   end
 

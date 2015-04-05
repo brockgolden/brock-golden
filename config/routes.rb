@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get 'music', to: 'pages#music', as: 'music'
 
   get 'articles', to: 'pages#articles', as: 'articles'
+
+  get 'feed', to: 'pages#feed'
 end
 
